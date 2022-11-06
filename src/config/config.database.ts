@@ -5,7 +5,7 @@ import env from 'dotenv'
 env.config();
 
 
-const sequelize = new Sequelize({
+export const sequelize = new Sequelize({
     dialect: 'postgres',
     host: 'localhost',
     username: String(process.env.user_PosgreSQL),

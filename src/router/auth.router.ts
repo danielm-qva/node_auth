@@ -1,11 +1,8 @@
 import { Router } from 'express'
-import handeError from '../util/HandlError';
-
+import { login, register } from '../controller/user.controller';
 const auth_Router = Router();
 
-auth_Router.get('', (req, res) => {
-    throw handeError(res, "Hola mundane", 404, req.body);
-})
-
+auth_Router.get('/login', login)
+auth_Router.post('/register', register)
 
 export default auth_Router;
